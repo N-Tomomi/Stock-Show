@@ -1,0 +1,25 @@
+// Place all the styles related to the stocks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  width: 600px;
+  margin: 40px auto;
+  // background-color: pink;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 22px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+ul > li {
+  margin-bottom: 5px;
+}

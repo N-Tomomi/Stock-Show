@@ -1,0 +1,11 @@
+<%= form_with model: @stock do |form| %>
+<p>
+  <%= form.text_field :stock_code, placeholder: 'stock code 4 digits' %>
+</p>
+<p>
+  <%= form.text_field :name, placeholder: "company's name" %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+<% end %>
