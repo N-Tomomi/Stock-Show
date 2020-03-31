@@ -1,0 +1,11 @@
+<h2>
+  <%= link_to '株の登録', new_stock_path, class: 'header-menu' %> 
+  Stock Show
+</h2>
+
+<ul>
+  <% @stocks.each do |stock| %>
+    <li><%= stock.stock_code %><%= stock.name %></li>
+    <%= link_to "#{stock.stock_code}の詳細へ", stock_path(stock.id) %>
+  <% end %>
+</ul>

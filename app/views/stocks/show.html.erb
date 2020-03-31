@@ -1,0 +1,8 @@
+<h2>
+<%= link_to "削除", stock_path(@stock.id), method: :delete, class: "header-menu delete-btn", data: { confirm: '削除してよろしいですか？' }%>
+<%= link_to '内容訂正', edit_stock_path, class: 'header-menu' %> 
+
+<%= @stock.stock_code %>
+</h2>
+<p><%= @stock.name %></p>
+

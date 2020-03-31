@@ -1,3 +1,6 @@
+<%# アプリ全体のレイアウトはこちら %>
+<%# CSSはapplication.css %>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,6 +13,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <h3><%= link_to image_tag('inu.png', class: 'logo'), root_path %></h3>
+      <%= yield %>
+    </div>
   </body>
 </html>
