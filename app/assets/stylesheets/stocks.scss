@@ -18,6 +18,10 @@ h1 {
   // border-bottom: 1px solid #ddd;
 }
 
+.stock-name {
+  color: tomato;
+}
+
 ul > li {
   margin-bottom: 5px;
 }
@@ -57,18 +61,25 @@ h4 {
   border-bottom: 1px solid #ddd;
 }
 
+
 ul {
   list-style: none;
   padding:0;
   margin:0;
 }
 
-li { 
+.index-ul {
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+
+.index-li { 
   padding-left: 1em; 
   text-indent: -.7em;
 }
 
-li:before {
+.index-li:before {
   content: "♥ ";
   color: red;
 }
