@@ -3,11 +3,13 @@
   Stock Show
 </h2>
 
-<ul>
+<ul class="index-ul">
   <% @stocks.each do |stock| %>
-    <li>
+    <li class="index-li">
       <%= stock.stock_code %>
       <%= link_to "#{stock.name}の詳細へ", stock_path(stock.id) %>
     </li>
   <% end %>
 </ul>
+
+<%= paginate(@stocks) %>

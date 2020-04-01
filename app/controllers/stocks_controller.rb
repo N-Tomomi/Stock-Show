@@ -2,7 +2,9 @@ class StocksController < ApplicationController
 
   def index
     # @stocks = Stock.all.order(stock_code: 'asc')
-    @stocks = Stock.all.order(created_at: 'desc')
+    # @stocks = Stock.all.order(created_at: 'desc')
+    @stocks = Stock.all.order("created_at DESC").page(params[:page]).per(10)
+    
   end
 
   def show
