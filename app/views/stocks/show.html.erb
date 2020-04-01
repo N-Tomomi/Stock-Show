@@ -10,6 +10,45 @@
   
   <div class="dividends">
     <h4>配当情報</h4>
+
+    
+
+  <% if @stock.dividends.any? %>
+    <ul>
+      <% @stock.dividends.each do |dividend| %>
+        <li class="dividends-list">
+          配当入金:<%= dividend.year_month.strftime('%Y年%m月') %>
+          <p class="dividend-info">配当(一株あたり):<%= dividend.dividend %></p>
+          <p class="dividend-info">保有株数:<%= dividend.stock_num %>株</p>
+          
+          <% total = dividend.dividend.to_i * dividend.stock_num.to_i %>
+          <p class="total-dividend">今期配当合計:<%= total %>円</p>
+          <p class="dividend-info">メモ:<%= dividend.comment %></P>
+          <%= link_to "削除", stock_dividend_path(@stock, dividend), method: :delete, class: "header-menu delete-btn", data: { confirm: '削除してよろしいですか？' }%>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
+    <%= form_for([@stock, @stock.dividends.build]) do |f| %>
+    <p>
+      <%= f.text_field :dividend, placeholder: '一株あたりの配当金額' %>
+    </p>
+    <p>
+      <%= f.text_field :stock_num, placeholder: "保有株数" %>
+    </p>
+    <p>
+      <%= f.text_area :comment, placeholder: "配当に関するメモ" %>
+    </p>
+    <p>
+      <%= f.date_select :year_month, {discard_day: true} %>
+    </p>
+    <p>
+      <%= f.submit "配当情報登録" %>
+    </p>
+    <% end %>
+
+
   </div>
   
   <div class="gifts">

@@ -48,7 +48,7 @@ body {
 
 input[type="text"], textarea {
   box-sizing: border-box;
-  width: 400px;
+  width: 395px;
   padding: 5px;
   font-size: 20px;
   border: 2px solid darkgreen;

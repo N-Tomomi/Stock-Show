@@ -3,7 +3,6 @@ class GiftsController < ApplicationController
   def create
     @stock = Stock.find(params[:stock_id])
     @stock.gifts.create(gift_params)
-    # Gift.create(gift_params)
     redirect_to root_path
   end
 
