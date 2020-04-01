@@ -14,6 +14,39 @@
   
   <div class="gifts">
     <h4>優待情報</h4>
+
+  <% if @stock.gifts.any? %>
+    <ul>
+      <% @stock.gifts.each do |gift| %>
+        <li class="gifts-list">
+          優待品:<%= gift.gift_name %>
+          <p>評価額:<%= gift.value %>円 優待到着:<%= gift.year_month.strftime('%Y年%m月') %></p>
+          <p>メモ:<%= gift.comment %></P>
+          <%= link_to "削除", stock_gift_path(@stock, gift), method: :delete, class: "header-menu delete-btn", data: { confirm: '削除してよろしいですか？' }%>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
+    <%= form_for([@stock, @stock.gifts.build]) do |f| %>
+    <p>
+      <%= f.text_field :gift_name, placeholder: '優待品の詳細' %>
+    </p>
+    <p>
+      <%= f.text_field :value, placeholder: "評価額" %>
+    </p>
+    <p>
+      <%= f.text_area :comment, placeholder: "優待に関するメモ" %>
+    </p>
+    <p>
+      <%= f.date_select :year_month, {discard_day: true} %>
+    </p>
+    <p>
+      <%= f.submit "優待情報登録" %>
+    </p>
+    <% end %>
+
   </div>
 </div>
+
 

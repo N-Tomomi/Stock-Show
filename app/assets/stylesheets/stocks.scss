@@ -2,23 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  font-family: Verdana, sans-serif;
-  font-size: 16px;
-}
+// body {
+//   font-family: Verdana, sans-serif;
+//   font-size: 16px;
+// }
 
-.container {
-  width: 800px;
-  margin: 40px auto;
-  // background-color: pink;
-}
+// .container {
+//   width: 800px;
+//   margin: 40px auto;
+//   // background-color: pink;
+// }
 
 
 h2 {
   font-size: 22px;
   padding-bottom: 10px;
   margin-bottom: 15px;
-  // margin-left: 30px;
+  padding-left: 30px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -38,27 +38,52 @@ ul > li {
   width: 800px;
   height: 50px;
   margin: 0 auto;
-  background-color: yellow;
-  text-align: center;
+  background-color: white;
+  // text-align: center;
   display: flex;
   .dividends {
     width: 400px;
-    height: 500px;
-    background-color: lightgray;
+    height: 1000px;
+    border: 1px solid #ddd;
+    background-color: white;
+    // background-color: lightgray;
   }
   .gifts {
     width: 400px;
-    height: 500px;
-    background-color: lightgreen;
+    height: 1000px;
+    border: 1px solid #ddd;
+    background-color: white;
+    // background-color: lightgreen;
+    // .gifts-list {
+    //   list-style: square;
+    // }
   }
 }
 
 h4 {
   font-weight: normal;
   font-size: 18px;
-  padding-bottom: 10px;
+  padding: 10px 0 10px 50px;
+  // padding-bottom: 10px;
+  // padding-left: 50px;
+  background-color: yellowgreen;
   margin-bottom: 15px;
   border-bottom: 1px solid #ddd;
 }
 
+ul {
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+
+li { 
+  padding-left: 1em; 
+  text-indent: -.7em;
+}
+
+li:before {
+  content: "♥ ";
+  color: red;
+}
 
