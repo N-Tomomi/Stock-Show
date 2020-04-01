@@ -3,4 +3,5 @@ class Stock < ApplicationRecord
   validates :name, presence: true
 
   has_many :gifts, dependent: :destroy
+  has_many :dividends, dependent: :destroy
 end

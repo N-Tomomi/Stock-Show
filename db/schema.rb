@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_01_042210) do
+ActiveRecord::Schema.define(version: 2020_04_01_073223) do
+
+  create_table "dividends", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "stock_id"
+    t.integer "dividend", null: false
+    t.integer "stock_num", null: false
+    t.datetime "year_month"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["stock_id"], name: "index_dividends_on_stock_id"
+  end
 
   create_table "gifts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "stock_id"
@@ -31,5 +42,6 @@ ActiveRecord::Schema.define(version: 2020_04_01_042210) do
     t.index ["stock_code"], name: "index_stocks_on_stock_code", unique: true
   end
 
+  add_foreign_key "dividends", "stocks"
   add_foreign_key "gifts", "stocks"
 end

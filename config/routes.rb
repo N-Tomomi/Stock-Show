@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   # resources :stocks, except: :index
   resources :stocks do
     resources :gifts, only: [:create, :destroy]
+    resources :dividends, only: [:create, :destroy]
   end
 end
