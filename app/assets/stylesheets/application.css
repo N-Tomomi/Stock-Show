@@ -15,6 +15,21 @@
  */
 
 /* application.html.erbのCSS */
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  background-image: url(43503.png);
+  background-color: rgba(255,255,255,0.4);
+  background-blend-mode: lighten;
+
+}
+
+.container {
+  width: 800px;
+  margin: 40px auto;
+  background-color: white;
+}
+
 .logo {
   /* position: absolute;
   top: 30px;
@@ -41,6 +56,10 @@ input[type="text"], textarea {
 
 textarea {
   height: 160px;
+}
+
+textarea:hover {
+  background-color: orange;
 }
 
 input {

@@ -5,7 +5,9 @@
 
 <ul>
   <% @stocks.each do |stock| %>
-    <li><%= stock.stock_code %><%= stock.name %></li>
-    <%= link_to "#{stock.stock_code}の詳細へ", stock_path(stock.id) %>
+    <li>
+      <%= stock.stock_code %>
+      <%= link_to "#{stock.name}の詳細へ", stock_path(stock.id) %>
+    </li>
   <% end %>
 </ul>
