@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## TECHCAMP個人アプリ３
 
-Things you may want to cover:
+## 株の配当金や優待を記録していくアプリ
+- 年月日を入力し、コメントも記入できる。
+- 家計簿の株バージョンアプリ
 
-* Ruby version
+<img width="1199" alt="Screenshot 2020-05-13 at 1 23 36" src="https://user-images.githubusercontent.com/61076281/81720332-3955b400-94b9-11ea-8b4e-590cd952b63d.png">
 
-* System dependencies
+---
 
-* Configuration
+- 銘柄を予め登録しておくのが理想、今回は個別に登録できるようにしてある
 
-* Database creation
+<img width="1199" alt="Screenshot 2020-05-13 at 1 24 04" src="https://user-images.githubusercontent.com/61076281/81720413-55595580-94b9-11ea-8979-a19448c61127.png">
 
-* Database initialization
+---
 
-* How to run the test suite
+- メインコンテンツ画像
+<img width="1199" alt="Screenshot 2020-05-13 at 1 23 48" src="https://user-images.githubusercontent.com/61076281/81720528-7d48b900-94b9-11ea-958d-b92da73fcf25.png">
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+** 使用技術 **
+- date_select
+- pagenation
+- Bootstrap
